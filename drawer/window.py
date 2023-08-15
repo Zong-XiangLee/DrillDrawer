@@ -1,12 +1,12 @@
 import turtle
-
+from gui import GUI
 # football field 2.25:1
 
 
 # default = 4
-window_scale = int(input("Window Scale:\n"))
-window_width_scale = window_scale
-window_height_scale = window_scale
+
+window_width_scale = GUI.window_scale
+window_height_scale = GUI.window_scale
 
 windowWidth = (360/2*window_width_scale + 50*window_width_scale)
 # default 2
@@ -36,11 +36,3 @@ def outline():
     turtle.goto(-outlineWidth/2, outline_length/2)
     turtle.goto(-outlineWidth/2, -outline_length/2)
     turtle.penup()
-
-
-if window_scale == 0:
-    print("hello world")
-else:
-    init_window()
-    outline()
-    turtle.mainloop()
