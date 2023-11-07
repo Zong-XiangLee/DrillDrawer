@@ -25,6 +25,7 @@ def init_window():
     turtle.title("Drill Viewer")
 
 
+
 def outline():
     turtle.penup()
     turtle.pencolor('white')
@@ -36,15 +37,12 @@ def outline():
     turtle.goto(-outlineWidth/2, outline_length/2)
     turtle.goto(-outlineWidth/2, -outline_length/2)
     turtle.penup()
-    turtle.mainloop()
+
 
 def initdrawer():
     init_window()
     turtle.delay(delay=None)
     outline()
-
-
-
-
-
+    turtle.mainloop()
+    turtle.TurtleScreen._RUNNING = True
 
